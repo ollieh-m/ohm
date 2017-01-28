@@ -6,40 +6,42 @@ body {
 }
 
 nav {
-  width: 100%;
   order: 1;
+  flex: 100%;
   background-color: red;
 }
 
 aside {
-  width: 100%;
   order: 2;
-  flex: 1;
+  // replace 100% width with auto based on a flex ratio
+  // share the width with other elements that can fit
+  // alternatively set widths that allow other elements to fit (30% to 68%, for example), with flex that fills remaining space evenly
+  flex: 1 auto;
   background-color: blue;
 }
 
 section {
-  width: 100%;
   order: 3;
-  flex: 4;
+  // replace 100% width with auto based on a flex ratio
+  // share the width with other elements that can fit
+  // alternatively set widths that allow other elements to fit (30% to 68%, for example), with flex that fills remaining space evenly
+  flex: 4 auto;
   background-color: yellow;
 }
 
 footer {
-  width: 100%;
   order: 4;
+  flex: 100%;
   background-color: red;
 }
 
 @media all and (max-width: 500px) {
   aside {
     order: 3;
-    flex: 0 1 auto;
-    width: 100%;
+    flex: 100%;
   }
   section {
     order: 2;
-    flex: 0 1 auto;
-    width: 100%;
+    flex: 100%;
   }
 }
