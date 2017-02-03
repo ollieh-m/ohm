@@ -10,15 +10,17 @@
 
   <body>
     <nav>
-      NAV CONTENT
+      <%= render 'nav/nav' %>
     </nav>
-    <aside>
-      ASIDE
-      <%= yield :aside %>
-    </aside>
-    <section>
-      <%= yield %>
-    </section>
+    <main>
+      <aside>
+        ASIDE
+        <%= yield :aside %>
+      </aside>
+      <section>
+        <%= yield :main %>
+      </section>
+    </main>
     <footer>
       FOOTER CONTENT
     </footer>

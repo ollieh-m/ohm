@@ -1,18 +1,23 @@
-body {
+html, body {
+  height: 100%;
+}
+
+main {
   display: flex;
   flex-direction: row-reverse;
   flex-wrap: wrap;
   align-items: stretch;
+  min-height: 75%;
 }
 
 nav {
-  order: 1;
-  flex: 100%;
+  height: 15%;
+  width: 100%;
   background-color: red;
 }
 
 aside {
-  order: 2;
+  order: 1;
   // replace 100% width with auto based on a flex ratio
   // share the width with other elements that can fit
   // alternatively set widths that allow other elements to fit (30% to 68%, for example), with flex that fills remaining space evenly
@@ -21,7 +26,7 @@ aside {
 }
 
 section {
-  order: 3;
+  order: 2;
   // replace 100% width with auto based on a flex ratio
   // share the width with other elements that can fit
   // alternatively set widths that allow other elements to fit (30% to 68%, for example), with flex that fills remaining space evenly
@@ -30,18 +35,18 @@ section {
 }
 
 footer {
-  order: 4;
-  flex: 100%;
+  height: 10%;
+  width: 100%;
   background-color: red;
 }
 
 @media all and (max-width: 500px) {
   aside {
-    order: 3;
+    order: 2;
     flex: 100%;
   }
   section {
-    order: 2;
+    order: 1;
     flex: 100%;
   }
 }
