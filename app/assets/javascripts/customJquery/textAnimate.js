@@ -1,5 +1,5 @@
 (function($) {
-  $.fn.writeText = function(content, callback) {
+  $.fn.writeText = function(content) {
     var contentArray = content.split(""), current = 0, elem = this;
 
     let interval = setInterval(function() {
@@ -7,7 +7,6 @@
         elem.text(elem.text() + contentArray[current++]);
       } else {
         clearInterval(interval)
-        callback(elem)
     }}, 50);
   };
 })(jQuery);

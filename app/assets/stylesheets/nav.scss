@@ -1,5 +1,11 @@
 nav div {
-  h2 {
+  #assistance {
     display: none;
+  }
+  #blinking-line {
+    display: inline-block;
+  }
+  input {
+    display: block;
   }
 }
