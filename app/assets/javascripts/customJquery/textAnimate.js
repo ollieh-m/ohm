@@ -8,7 +8,7 @@
       } else {
         clearInterval(interval)
         callback(elem)
-    }}, 100);
+    }}, 50);
   };
 })(jQuery);
 
@@ -20,7 +20,7 @@
       if(elem.text().slice(-1) === '_'){
         elem.text(elem.text().slice(0, -1));
       } else {
-        elem.text(elem.text() + '_')
+        elem.text(elem.text() + ' _')
     }}, 500);
   };
 })(jQuery);
