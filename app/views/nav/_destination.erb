@@ -1,0 +1,7 @@
+<div>
+  <h2 id='assistance'>Here you can <%= destination_purpose %>. Want to be somewhere else? Find out more // listen // get in touch?</h2>
+  <h2 id='blinking-line'></h2>
+  <%= form_for :nav, url: nav_path do |f| %>
+    <%= f.text_field(:to) %>
+  <% end %>
+</div>
