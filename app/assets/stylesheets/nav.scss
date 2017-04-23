@@ -2,10 +2,20 @@ nav div {
   #assistance {
     display: none;
   }
-  #blinking-line {
-    display: inline-block;
+  #nav_to {
+    display: none;
   }
-  input {
-    display: block;
+  #blinking-line {
+    display: inline;
+  }
+}
+
+.nav {
+  &__header {
+    padding: 10px;
+  }
+
+  &__form {
+    padding: 10px;
   }
 }

@@ -1,7 +1,14 @@
 <div>
-  <h2 id='assistance'>Hey. Welcome to These Walls. What do you want to do? Find out more // listen // get in touch?</h2>
-  <h2 id='blinking-line'></h2>
-  <%= form_for :nav, url: nav_path do |f| %>
-    <%= f.text_field(:to) %>
-  <% end %>
+  <div class='nav__header'>
+    <h2 id='assistance'>
+      Hey. Welcome to These Walls. What do you want to do? Find out more // listen // get in touch?
+    </h2>
+    <h2 id='blinking-line'></h2>
+  </div>
+
+  <div class='nav__form'>
+    <%= form_for :nav, url: nav_path do |f| %>
+      <%= f.text_field(:to) %>
+    <% end %>
+  </div>
 </div>

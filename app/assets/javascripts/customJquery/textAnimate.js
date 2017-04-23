@@ -11,7 +11,7 @@
         } else {
           clearInterval(interval)
           resolve();
-      }}, 40);
+      }}, 30);
     })
   };
 })(jQuery);

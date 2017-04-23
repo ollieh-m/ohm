@@ -16,7 +16,7 @@ class OHM.Nav
 
   giveInstruction: (content)->
     @assistantTextArea.text('')
-    @assistantTextArea.css('display', 'inline-block')
+    @assistantTextArea.css('display', 'inline')
     @assistantTextArea.writeText(content)
       .then =>
         @enableInput()
@@ -32,9 +32,11 @@ class OHM.Nav
 
   disableInput: ->
     console.log('disable input')
+    @responseArea.css('display', 'none')
     @responseArea.prop('disabled', true)
 
   enableInput: ->
     console.log('enable input')
+    @responseArea.css('display', 'block')
     @responseArea.prop('disabled', false)
 
