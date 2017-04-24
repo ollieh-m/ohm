@@ -10,8 +10,15 @@
     <%= form_for :nav, url: nav_path do |f| %>
       <div class='nav__form_response-area'>
         <%= f.text_field(:to) %>
+        <span id='nav_to_width_calc'></span>
         <%= f.label(:to, '<<') %>
+
+        <div id='help-hover'>
+          [Type where you want to go to the left of the arrows and hit enter. Easy peasy]
+        </div>
       </div>
     <% end %>
   </div>
+
 </div>
+

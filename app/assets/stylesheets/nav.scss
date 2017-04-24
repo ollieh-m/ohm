@@ -1,5 +1,5 @@
 .nav {
-  color: $accent-one;
+  color: $accent-three;
 
   &__header {
     padding: 10px;
@@ -16,5 +16,27 @@
     &__response-area {
       display: none;
     }
+  }
+
+  #nav_to, #nav_to_width_calc {
+    font-size: 20px;
+    padding: 0;
+    color: white;
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid $accent-three;
+  }
+
+  #nav_to_width_calc {
+    display: none;
+  }
+
+  #help-hover {
+    display: none;
+    position: relative;
+    left: 10px;
+    bottom: 10px;
+    font-size: 10px;
+    color: red;
   }
 }
