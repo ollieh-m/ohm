@@ -2,10 +2,10 @@ class OHM.Nav
 
   constructor: ->
     @contentArea = $('nav div')
-    @assistantTextArea = @contentArea.find('#assistance')
+    @assistantTextArea = @contentArea.find('.nav__header__assistance')
     @initialContent = @assistantTextArea.text()
-    @responseArea = @contentArea.find('input#nav_to')
-    @blinkingLine = @contentArea.find('#blinking-line')
+    @responseArea = @contentArea.find('.nav__form_response-area')
+    @blinkingLine = @contentArea.find('.nav__header__blinking-line')
     @init()
 
   init: ->
@@ -13,6 +13,7 @@ class OHM.Nav
     @giveInstruction(@initialContent)
     @blinkingLine.addBlinkingLine()
     @dealWithResponse()
+    # set cursor to follow input
 
   giveInstruction: (content)->
     @assistantTextArea.text('')
@@ -24,7 +25,7 @@ class OHM.Nav
   dealWithResponse: ->
     @responseArea.keypress (e)=>
       if e.which == 13
-        entry = @responseArea.val().toLowerCase()
+        entry = @responseArea.find('input#nav_to').val().toLowerCase()
         if entry != 'find out more' && entry != 'listen' && entry != 'get in touch'
           e.preventDefault()
           @disableInput()
@@ -37,6 +38,6 @@ class OHM.Nav
 
   enableInput: ->
     console.log('enable input')
-    @responseArea.css('display', 'block')
+    @responseArea.css('display', 'inline')
     @responseArea.prop('disabled', false)
 

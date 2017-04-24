@@ -2,6 +2,7 @@ html, body {
   height: 100%;
   margin: 0;
   padding: 0;
+  font-family: $font;
 }
 
 main {
@@ -13,9 +14,9 @@ main {
 }
 
 nav {
-  min-height: 15%;
+  min-height: 12%;
   width: 100%;
-  background-color: red;
+  background-color: $dark-colour;
 }
 
 aside {
@@ -24,7 +25,7 @@ aside {
   // share the width with other elements that can fit
   // alternatively set widths that allow other elements to fit (30% to 68%, for example), with flex that fills remaining space evenly
   flex: 1 auto;
-  background-color: blue;
+  background-color: $accent-one;
 }
 
 section {
@@ -33,13 +34,13 @@ section {
   // share the width with other elements that can fit
   // alternatively set widths that allow other elements to fit (30% to 68%, for example), with flex that fills remaining space evenly
   flex: 4 auto;
-  background-color: yellow;
+  background-color: $light-colour;
 }
 
 footer {
   height: 10%;
   width: 100%;
-  background-color: red;
+  background-color: $dark-colour;
 }
 
 @media all and (max-width: 500px) {

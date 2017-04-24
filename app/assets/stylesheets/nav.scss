@@ -1,21 +1,20 @@
-nav div {
-  #assistance {
-    display: none;
-  }
-  #nav_to {
-    display: none;
-  }
-  #blinking-line {
-    display: inline;
-  }
-}
-
 .nav {
+  color: $accent-one;
+
   &__header {
     padding: 10px;
+    &__assistance {
+      display: none;
+    }
+    &__blinking-line {
+      display: inline;
+    }
   }
 
   &__form {
     padding: 10px;
+    &__response-area {
+      display: none;
+    }
   }
 }
