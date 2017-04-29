@@ -1,3 +1,10 @@
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
 html, body {
   height: 100%;
   margin: 0;
@@ -11,6 +18,12 @@ main {
   flex-wrap: wrap;
   align-items: stretch;
   min-height: 75%;
+
+  background: image-url('lens.png') no-repeat center center fixed, image-url('tint.gif') no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
 }
 
 nav {
@@ -20,27 +33,34 @@ nav {
 }
 
 aside {
-  order: 1;
-  // replace 100% width with auto based on a flex ratio
-  // share the width with other elements that can fit
-  // alternatively set widths that allow other elements to fit (30% to 68%, for example), with flex that fills remaining space evenly
-  flex: 1 auto;
-  background-color: $accent-one;
-}
-
-section {
   order: 2;
   // replace 100% width with auto based on a flex ratio
   // share the width with other elements that can fit
   // alternatively set widths that allow other elements to fit (30% to 68%, for example), with flex that fills remaining space evenly
-  flex: 4 auto;
-  background-color: $light-colour;
+  flex: 1 0 20%;
+  background-color: transparent;
+}
+
+section {
+  order: 1;
+  // replace 100% width with auto based on a flex ratio
+  // share the width with other elements that can fit
+  // alternatively set widths that allow other elements to fit (30% to 68%, for example), with flex that fills remaining space evenly
+  flex: 1 0 78%;
+  padding-right: 35%;
+  background-color: transparent;
 }
 
 footer {
   height: 10%;
   width: 100%;
   background-color: $dark-colour;
+}
+
+@media all and (max-width: 700px) {
+  section {
+    padding-right: 25%;
+  }
 }
 
 @media all and (max-width: 500px) {
@@ -51,5 +71,12 @@ footer {
   section {
     order: 1;
     flex: 100%;
+    padding-right: 20%;
+  }
+}
+
+@media all and (max-width: 340px) {
+  section {
+    padding-right: 0;
   }
 }
