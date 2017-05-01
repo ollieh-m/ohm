@@ -1,24 +1,30 @@
 .about {
 
   .section {
-    margin-top: 30px;
-    margin-bottom: 30px;
-    p, h1, h3 {
-      margin: 8px 0;
-    }
 
     &__who {
       color: $dark-colour;
     }
 
     &__words {
-      color: $accent-three;
       background-color: $dark-colour;
       padding: 0 10px;
 
       p, h3 {
         margin: 0;
         padding: 8px 0;
+      }
+
+      p {
+        color: $accent-three;
+      }
+
+      h3 {
+        color: $accent-one;
+
+        &.showing {
+          color: $accent-three
+        }
       }
 
       ul {

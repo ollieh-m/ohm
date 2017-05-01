@@ -16,13 +16,15 @@ class OHM.Words
       wordsShowing = contentArea.find('.words.showing')
       nameClicked = $(this)
       wordsToShow = nameClicked.next()
-      arrows = nameClicked.find('span.arrows')
 
       wordsShowing.slideUp 'slow', ->
         $(this).removeClass 'showing'
-        $(this).prev().find('span.arrows').hide()
+        name = $(this).prev()
+        name.removeClass 'showing'
+        name.find('span.arrows').hide()
 
       wordsShowing.promise().done ->
+        nameClicked.addClass 'showing'
         wordsToShow.slideDown 'slow'
         wordsToShow.addClass 'showing'
-        arrows.show()
+        nameClicked.find('span.arrows').show()

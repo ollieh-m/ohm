@@ -1,27 +1,27 @@
 <%= content_for :main do %>
-<div class='about'>
-  <div class='section section__who'>
-    <h1>These Walls are</h1>
-    <p>Ollie Haydon-Mulligan - drums, guitar, vocals</p>
-    <p>Dave Bruce - keys, sax</p>
-    <p>Paul Veal - bass</p>
-    <p>All songs by Ollie, who lives in Bristol with his beautiful wife Laura and whippet Mabel</p>
-  </div>
 
-  <div class='section section__words'>
-    <ul>
-      <% about_page.songs.each do |song| %>
-        <li>
-          <h3 class='name'><%= song.name %><span class='arrows'> <<</span></h2>
-          <div class='words'>
-            <%= simple_format(song.words) %>
-          </div>
-        </li>
-      <% end %>
-    </ul>
-  </div>
-</div>
+  <div class='about'>
+    <div class='section section__who'>
+      <h1>These Walls are</h1>
+      <p>Ollie Haydon-Mulligan - drums, guitar, vocals</p>
+      <p>Dave Bruce - keys, sax</p>
+      <p>Paul Veal - bass</p>
+      <p>All songs by Ollie, who lives in Bristol with his beautiful wife Laura and whippet Mabel</p>
+    </div>
 
+    <div class='section section__words'>
+      <ul>
+        <% about_page.songs.each do |song| %>
+          <li>
+            <h3 class='name'><%= song.name %><span class='arrows'> <<</span></h2>
+            <div class='words'>
+              <%= simple_format(song.words) %>
+            </div>
+          </li>
+        <% end %>
+      </ul>
+    </div>
+  </div>
 
 <% end %>
 
