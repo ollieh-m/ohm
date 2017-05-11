@@ -1,89 +1,26 @@
 <%= content_for :main do %>
-Contact
-</br>
-LINE TWO
-</br>
-LINE THREE
-</br>
-LINE FOUR
-</br>
-LINE FIVE
-</br>
-LINE TWO
-</br>
-LINE THREE
-</br>
-LINE FOUR
-</br>
-LINE FIVE
-</br>
-LINE TWO
-</br>
-LINE THREE
-</br>
-LINE FOUR
-</br>
-LINE FIVE
-</br>
-LINE TWO
-</br>
-LINE THREE
-</br>
-LINE FOUR
-</br>
-LINE FIVE
-</br>
-LINE TWO
-</br>
-LINE THREE
-</br>
-LINE FOUR
-</br>
-LINE FIVE
-</br>
-LINE TWO
-</br>
-LINE THREE
-</br>
-LINE FOUR
-</br>
-LINE FIVE
-</br>
-LINE TWO
-</br>
-LINE THREE
-</br>
-LINE FOUR
-</br>
-LINE FIVE
-</br>
-LINE TWO
-</br>
-LINE THREE
-</br>
-LINE FOUR
-</br>
-LINE FIVE
-</br>
-LINE TWO
-</br>
-LINE TWO
-</br>
-LINE THREE
-</br>
-LINE FOUR
-</br>
-LINE FIVE
-</br>
-LINE TWO
-</br>
-LINE THREE
-</br>
-LINE FOUR
-</br>
-LINE FIVE
-</br>
-LINE TWO
-</br>
+  <div class='contact'>
+    <div class='section section__form'>
+
+      <%= form_for @contact_form, url: contact_path do |f| %>
+
+        <div class='name form__field'>
+          <div class='header'>
+            <h2 class='assistance'>
+              First, what's your name please?
+            </h2>
+            <h2 class='blinking-line'></h2>
+          </div>
+
+          <div class='response-area'>
+            <%= f.text_field :name %>
+            <span id='width_calc'></span>
+            <%= f.label(:name, '<<') %>
+          </div>
+        </div>
+
+      <% end %>
+    </div>
+  </div>
 <% end %>
 

@@ -1,0 +1,38 @@
+.contact {
+
+  .form__field {
+    padding: 10px;
+    .assistance {
+      display: none;
+    }
+    .blinking-line {
+      display: inline;
+    }
+    .response-area {
+      display: none;
+    }
+  }
+
+  input, #width_calc {
+    font-size: 20px;
+    padding: 0;
+    color: white;
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid $accent-three;
+  }
+
+  #width_calc {
+    display: none;
+  }
+
+  #help-hover {
+    display: none;
+    position: relative;
+    left: 10px;
+    bottom: 10px;
+    font-size: 10px;
+    color: red;
+  }
+
+}
