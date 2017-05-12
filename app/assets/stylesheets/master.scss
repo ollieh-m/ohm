@@ -10,3 +10,9 @@ $font: 'Droid Sans', sans-serif;
 @import 'destination';
 @import 'about';
 @import 'contact';
+
+input:focus, textarea:focus {outline:0;}
+textarea {
+  resize: none;
+}
+

@@ -7,15 +7,59 @@
         <div class='name form__field'>
           <div class='header'>
             <h2 class='assistance'>
-              First, what's your name please?
+              name
             </h2>
             <h2 class='blinking-line'></h2>
           </div>
 
-          <div class='response-area'>
+          <div class='response-area' data-title='name' data-type='text' data-required='true'>
             <%= f.text_field :name %>
             <span id='width_calc'></span>
             <%= f.label(:name, '<<') %>
+          </div>
+        </div>
+
+        <div class='email form__field'>
+          <div class='header'>
+            <h2 class='assistance'>
+              email
+            </h2>
+            <h2 class='blinking-line'></h2>
+          </div>
+
+          <div class='response-area' data-title='email' data-type='email' data-required='true'>
+            <%= f.text_field :email %>
+            <span id='width_calc'></span>
+            <%= f.label(:email, '<<') %>
+          </div>
+        </div>
+
+        <div class='message form__field'>
+          <div class='header'>
+            <h2 class='assistance'>
+              message
+            </h2>
+            <h2 class='blinking-line'></h2>
+          </div>
+
+          <div class='response-area' data-title='message' data-type='text-area' data-required='true'>
+            <%= f.text_area :message %>
+            <%= f.label(:message, '<<') %>
+          </div>
+        </div>
+
+        <div class='submit form__field'>
+          <div class='header'>
+            <h2 class='assistance'>
+              now what?
+            </h2>
+            <h2 class='blinking-line'></h2>
+          </div>
+
+          <div class='response-area' data-title='submit' data-type='text' data-required='true'>
+            <%= text_field_tag :contact_form_submit %>
+            <span id='width_calc'></span>
+            <%= label_tag(:contact_form_submit, '<<') %>
           </div>
         </div>
 

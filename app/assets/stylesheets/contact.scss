@@ -1,15 +1,29 @@
 .contact {
 
   .form__field {
+    display: none;
+    background-color: $dark-colour;
     padding: 10px;
+    min-height: 50px;
+    color: white;
+
     .assistance {
       display: none;
     }
     .blinking-line {
       display: inline;
     }
+
     .response-area {
       display: none;
+      textarea {
+        width: 93%;
+        height: 150px;
+        border: none;
+        color: $dark-colour;
+        margin-top: 10px;
+        font-size: 12px;
+      }
     }
   }
 
@@ -19,7 +33,7 @@
     color: white;
     background-color: transparent;
     border: none;
-    border-bottom: 1px solid $accent-three;
+    border-bottom: 1px solid white;
   }
 
   #width_calc {
