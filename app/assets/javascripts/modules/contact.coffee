@@ -64,7 +64,7 @@ class OHM.Contact
   initSubmit: ->
     @submitArea.css('display', 'block')
     @disableInput(@submitResponseArea)
-    @giveInstruction(@submitAssistanceTextArea, @submitResponseArea)
+    @giveInstruction(@submitAssistanceTextArea, @submitResponseArea, false, false)
     @submitBlinkingLine.addBlinkingLine()
     @setCursor(@submitInput)
     @dealWithSubmit(@submitResponseArea, @submitAssistanceTextArea)
@@ -78,13 +78,13 @@ class OHM.Contact
     else if @nameResponseArea.hasClass('complete') && @emailResponseArea.hasClass('complete') && @messageResponseArea.hasClass('complete') && !@submitResponseArea.hasClass('complete')
       @initSubmit()
 
-  giveInstruction: (assistanceArea, responseArea, customMessage=null)->
+  giveInstruction: (assistanceArea, responseArea, customMessage=null, focus=true)->
     content = customMessage || assistanceArea.text()
     assistanceArea.text('')
     assistanceArea.css('display', 'inline')
     assistanceArea.writeText(content)
       .then =>
-        return @enableInput(responseArea)
+        return @enableInput(responseArea, focus)
 
   dealWithResponse: (responseArea, assistanceArea) ->
     responseArea.keypress (e)=>
@@ -131,16 +131,6 @@ class OHM.Contact
       if (e.keyCode == 8 || e.keyCode == 46)
         @resizeForText(input)
 
-  # setHelpHover: ->
-  #   @helpHover.hover(
-  #     (e)=>
-  #       console.log('display hover')
-  #       $('#help-hover').css('display', 'inline')
-  #     (e)=>
-  #       $('#help-hover').hide()
-  #   )
-
-
   resizeForText: (element, text='') ->
     span = element.siblings('span').first()
     span.text(element.val() + text)
@@ -155,8 +145,11 @@ class OHM.Contact
     element.css('display', 'none')
     element.prop('disabled', true)
 
-  enableInput: (element) ->
+  enableInput: (element, focus) ->
     console.log('enable input')
     element.css('display', 'inline')
     element.prop('disabled', false)
+    if focus
+      element.find('input, textarea').focus()
+
 
