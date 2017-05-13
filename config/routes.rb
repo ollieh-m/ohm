@@ -6,6 +6,7 @@ Rails.application.routes.draw do
 
   root 'home#show'
   resource :nav, only: [:create]
+  resource :aside, only: [:show]
   resource :about, only: [:show]
   resource :listen, only: [:show]
   resource :contact, only: [:show, :create]

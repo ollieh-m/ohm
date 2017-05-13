@@ -17,7 +17,7 @@ main {
   flex-direction: row-reverse;
   flex-wrap: wrap;
   align-items: stretch;
-  min-height: 76%;
+  min-height: 80%;
 
   background: image-url('lens.png') no-repeat center center fixed, image-url('tint.gif') no-repeat center center fixed;
   -webkit-background-size: cover;
@@ -39,6 +39,8 @@ aside {
   // alternatively set widths that allow other elements to fit (30% to 68%, for example), with flex that fills remaining space evenly
   flex: 1 0 20%;
   background-color: transparent;
+  // in order to position elements within aside using absolute
+  position: relative;
 }
 
 section {
@@ -54,7 +56,7 @@ section {
 }
 
 footer {
-  height: 12%;
+  min-height: 8%;
   width: 100%;
   background-color: $dark-colour;
 }
