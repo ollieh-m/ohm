@@ -118,7 +118,10 @@ class OHM.Contact
         else
           @giveInstruction(@submitAssistanceTextArea, @submitResponseArea, "sure! #{entry}ing now...")
             .then =>
-              $('form.new_contact_form').submit()
+              setTimeout ->
+                $('form.new_contact_form').submit()
+              , 1000
+
 
 
   setCursor: (input) ->

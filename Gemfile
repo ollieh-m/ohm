@@ -36,6 +36,9 @@ gem 'jbuilder', '~> 2.5'
 # gem 'capistrano-rails', group: :development
 gem 'administrate'
 
+gem 'mailgun-ruby'
+gem 'delayed_job_active_record'
+
 group :test do
   gem 'rspec-rails'
   gem 'capybara'

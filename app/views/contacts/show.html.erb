@@ -1,5 +1,15 @@
 <%= content_for :main do %>
   <div class='contact'>
+    <% if @contact_form.sent %>
+      <div class='section flash'>
+        <h1>Message sent successfully - we'll reply soon!</h1>
+      </div>
+    <% elsif @contact_form.errors.any? %>
+      <div class='section flash'>
+        <h1>Couldn't send - try again</h1>
+      </div>
+    <% end %>
+
     <div class='section section__form'>
 
       <%= form_for @contact_form, url: contact_path do |f| %>
