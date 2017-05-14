@@ -12,8 +12,13 @@
       text-transform: uppercase;
       margin: 7px ;
     }
-    &.level1 {
-      display: block;
+
+    a {
+      text-decoration: none;
+    }
+
+    [data-level='2'] {
+      margin-left: 23px;
     }
   }
 }
