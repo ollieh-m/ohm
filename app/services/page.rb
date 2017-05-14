@@ -4,19 +4,11 @@ class Page
   def initialize(title:, sections: [])
     @title = title
     @sections = sections.map do |section|
-      Section.new(title: section)
+      Page.new(title: section)
     end
   end
 
-  class Section
-    attr_reader :title
-
-    def initialize(title:)
-      @title = title
-    end
-  end
-
-  def self.generate
+  def self.generate_pages
     [
       self.new(title: 'Find out more', sections: ['The band', 'Words']),
       self.new(title: 'Listen', sections: Song.all.map(&:name)),
