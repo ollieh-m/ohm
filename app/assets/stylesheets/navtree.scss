@@ -5,15 +5,15 @@
   bottom: 0;
 
   .page__title {
+    display: none;
     h1 {
       display: inline-block;
       font-size: 15px;
       text-transform: uppercase;
       margin: 7px ;
     }
-  }
-
-  .section__title {
-    display: none;
+    &.level1 {
+      display: block;
+    }
   }
 }
