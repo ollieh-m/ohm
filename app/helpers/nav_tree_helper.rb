@@ -11,6 +11,7 @@ module NavTreeHelper
                               <h1><a href='#{page.link}'>#{page.title}</a></h1>
                             </div>
                           </div>")
+
       html_string = render_nav_tree(page.sections, html_string, page.title, level+1)
     end
 

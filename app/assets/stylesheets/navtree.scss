@@ -4,6 +4,10 @@
   position: absolute;
   bottom: 0;
 
+  .fa {
+    cursor: pointer;
+  }
+
   .page__title {
     display: none;
     h1 {
@@ -11,10 +15,11 @@
       font-size: 15px;
       text-transform: uppercase;
       margin: 7px ;
-    }
 
-    a {
-      text-decoration: none;
+      &.selected {
+        color: $accent-three;
+        background-color: $dark-colour;
+      }
     }
 
     [data-level='2'] {

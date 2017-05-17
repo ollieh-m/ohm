@@ -1,15 +1,14 @@
 <%= content_for :main do %>
 
   <div class='about'>
-    <div class='section section__who'>
-      <h1>These Walls are</h1>
-      <p>Ollie Haydon-Mulligan - drums, guitar, vocals</p>
-      <p>Dave Bruce - keys, sax</p>
-      <p>Paul Veal - bass</p>
-      <p>All songs by Ollie, who lives in Bristol with his beautiful wife Laura and whippet Mabel</p>
+    <div class='section section__who' id='band'>
+      <h1>These Walls are...</h1>
+      <p><b>Ollie Haydon-Mulligan</b> on drums, guitar and vocals, with <b>Dave Bruce</b> on keys and sax, and <b>Paul Veal</b> on bass.</p>
+      <p>Ollie lives in Bristol with his beautiful wife (Laura) and whippet (Mabel). He wrote these songs over the last few years about falling in love, being in love, leaving his job, and his dad turning 80.</p>
+      <p>He has some more songs - about Mabel, and his first child, due in June - that he'd love to record sometime soon.</p>
     </div>
 
-    <div class='section section__words'>
+    <div class='section section__words' id='lyrics'>
       <ul>
         <% about_page.songs.each do |song| %>
           <li>

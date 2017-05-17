@@ -4,6 +4,9 @@
 
     &__who {
       color: $dark-colour;
+      h1 {
+        margin: 15px 0;
+      }
     }
 
     &__words {
@@ -25,6 +28,8 @@
         &.showing {
           color: $accent-three
         }
+
+        cursor: pointer;
       }
 
       ul {

@@ -23,8 +23,9 @@ class OHM.Words
         name.removeClass 'showing'
         name.find('span.arrows').hide()
 
-      wordsShowing.promise().done ->
-        nameClicked.addClass 'showing'
-        wordsToShow.slideDown 'slow'
-        wordsToShow.addClass 'showing'
-        nameClicked.find('span.arrows').show()
+      if !wordsToShow.hasClass('showing')
+        wordsShowing.promise().done ->
+          nameClicked.addClass 'showing'
+          wordsToShow.slideDown 'slow'
+          wordsToShow.addClass 'showing'
+          nameClicked.find('span.arrows').show()
