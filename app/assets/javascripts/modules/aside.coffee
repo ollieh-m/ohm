@@ -9,6 +9,7 @@ class OHM.Aside
       url: '/aside',
     ).done( (data)=>
       @asideArea.html(data)
+      console.log(data)
       @startingPositions()
       @initNavTreeInteraction()
     );
@@ -40,14 +41,15 @@ class OHM.Aside
   startingPositions: ->
     url = window.location.href
     path = url.substring(url.lastIndexOf('/'))
-    nav_link_h1= $('a[href="' + path + '"]').parent()
-    nav_link_h1.addClass('selected')
-    nav_link_arrow = nav_link_h1.prev()
+    unless path == '/'
+      nav_link_h1= $('a[href="' + path + '"]').parent()
+      nav_link_h1.addClass('selected')
+      nav_link_arrow = nav_link_h1.prev()
 
-    parent = nav_link_arrow.data().parent
-    next_level = nav_link_arrow.data().level
-    unless next_level == 1
-      @expandParentsRecursively(parent, next_level)
+      parent = nav_link_arrow.data().parent
+      next_level = nav_link_arrow.data().level
+      unless next_level == 1
+        @expandParentsRecursively(parent, next_level)
 
     $('i.fa').filter('[data-level="1"]').parent().show()
 

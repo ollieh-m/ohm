@@ -1,10 +1,24 @@
 footer {
   .container {
     text-align: right;
+    padding: 5px;
+    position: relative;
   }
 
   .text {
+    display: inline-block;
     color: $accent-one;
-    padding: 5px
+    position: absolute;
+    right: 40px;
+    top: 10px;
+  }
+
+  .logo {
+    width: 30px;
+    display: inline-block;
+
+    img {
+      width: 30px;
+    }
   }
 }
