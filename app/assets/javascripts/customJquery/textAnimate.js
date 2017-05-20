@@ -5,7 +5,7 @@
     return new Promise(function(resolve, reject){
       var contentArray = content.split(""), current = 0, elem = self;
 
-      let interval = setInterval(function() {
+      var interval = setInterval(function() {
         if(current < contentArray.length) {
           elem.text(elem.text() + contentArray[current++]);
         } else {
@@ -20,7 +20,7 @@
   $.fn.addBlinkingLine = function() {
     var elem = this;
 
-    let interval = setInterval(function() {
+    var interval = setInterval(function() {
       if(elem.text().slice(-1) === '_'){
         elem.text(elem.text().slice(0, -1));
       } else {
