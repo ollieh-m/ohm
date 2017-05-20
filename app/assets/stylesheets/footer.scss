@@ -8,9 +8,8 @@ footer {
   .text {
     display: inline-block;
     color: $accent-one;
-    position: absolute;
-    right: 40px;
-    top: 10px;
+    position: relative;
+    bottom: 9px;
   }
 
   .logo {

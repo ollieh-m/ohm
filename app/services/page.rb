@@ -10,7 +10,7 @@ class Page
   def self.generate_pages
     [
       self.new(title: 'Find out more', link: '/about', sections: [self.new(title: 'The band', link: '/about#band', sections: [self.new(title: 'Third level', link: '/about#third')]), self.new(title: 'Lyrics', link: '/about#lyrics')]),
-      self.new(title: 'Listen', link: '/listen', sections: Song.all.map{|song| self.new(title: song.name)}),
+      self.new(title: 'Listen', link: '/listen', sections: Song.all.decorate.map{|song| self.new(title: song.name, link: '/listen#' + song.anchor)}),
       self.new(title: 'Get in touch', link: '/contact')
     ]
   end

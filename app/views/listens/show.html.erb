@@ -1,89 +1,10 @@
 <%= content_for :main do %>
-Listen
-</br>
-LINE TWO
-</br>
-LINE THREE
-</br>
-LINE FOUR
-</br>
-LINE FIVE
-</br>
-LINE TWO
-</br>
-LINE THREE
-</br>
-LINE FOUR
-</br>
-LINE FIVE
-</br>
-LINE TWO
-</br>
-LINE THREE
-</br>
-LINE FOUR
-</br>
-LINE FIVE
-</br>
-LINE TWO
-</br>
-LINE THREE
-</br>
-LINE FOUR
-</br>
-LINE FIVE
-</br>
-LINE TWO
-</br>
-LINE THREE
-</br>
-LINE FOUR
-</br>
-LINE FIVE
-</br>
-LINE TWO
-</br>
-LINE THREE
-</br>
-LINE FOUR
-</br>
-LINE FIVE
-</br>
-LINE TWO
-</br>
-LINE THREE
-</br>
-LINE FOUR
-</br>
-LINE FIVE
-</br>
-LINE TWO
-</br>
-LINE THREE
-</br>
-LINE FOUR
-</br>
-LINE FIVE
-</br>
-LINE TWO
-</br>
-LINE TWO
-</br>
-LINE THREE
-</br>
-LINE FOUR
-</br>
-LINE FIVE
-</br>
-LINE TWO
-</br>
-LINE THREE
-</br>
-LINE FOUR
-</br>
-LINE FIVE
-</br>
-LINE TWO
-</br>
+  <div class='listen'>
+    <% @songs.each do |song| %>
+      <div class='section section__video' id=<%= song.anchor %>>
+        <iframe width="560" height="315" src=<%= song.youtube_url %> frameborder="0" allowfullscreen></iframe>
+      </div>
+    <% end %>
+  </div>
 <% end %>
 

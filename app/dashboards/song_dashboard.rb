@@ -11,6 +11,7 @@ class SongDashboard < Administrate::BaseDashboard
     id: Field::Number,
     name: Field::String,
     words: Field::Text,
+    youtube_url: Field::Text,
     created_at: Field::DateTime,
     updated_at: Field::DateTime,
   }.freeze
@@ -24,6 +25,7 @@ class SongDashboard < Administrate::BaseDashboard
     :id,
     :name,
     :words,
+    :youtube_url,
     :created_at,
   ].freeze
 
@@ -33,6 +35,7 @@ class SongDashboard < Administrate::BaseDashboard
     :id,
     :name,
     :words,
+    :youtube_url,
     :created_at,
     :updated_at,
   ].freeze
@@ -43,6 +46,7 @@ class SongDashboard < Administrate::BaseDashboard
   FORM_ATTRIBUTES = [
     :name,
     :words,
+    :youtube_url,
   ].freeze
 
   # Overwrite this method to customize how songs are displayed
