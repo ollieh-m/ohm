@@ -14,4 +14,28 @@
       height: 100%;
     }
   }
+
+  .section__soundcloud {
+    text-align: right;
+
+    .logo, .text {
+      display: inline-block;
+    }
+
+    .logo-wrapper {
+      display: inline-block;
+      border-bottom: 3px solid $soundcloud;
+      position: relative;
+    }
+
+    .logo {
+      position: relative;
+    }
+
+    img {
+      margin-top: -10px;
+      margin-bottom: -15px;
+      width: 50px;
+    }
+  }
 }

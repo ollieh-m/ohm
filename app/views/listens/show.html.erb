@@ -5,6 +5,17 @@
         <iframe width="560" height="315" src=<%= song.youtube_url %> frameborder="0" allowfullscreen></iframe>
       </div>
     <% end %>
+
+    <div class='section section__soundcloud'>
+      <div class='logo-wrapper'>
+        <div class='logo'>
+          <%= image_tag 'soundcloud.png' %>
+        </div>
+        <div class='text'>
+          <%= link_to 'LISTEN ON SOUNDCLOUD', 'https://soundcloud.com/ollie-haydon-mulligan' %>
+        </div>
+      </div>
+    </div>
   </div>
 <% end %>
 
