@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:fb="http://ogp.me/ns/fb#">
   <head>
     <title>Ohm</title>
     <%= csrf_meta_tags %>
@@ -8,6 +9,10 @@
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <meta property="og:image" content=<%= image_url 'tint.gif'%> />
+    <meta property="og:url" content=<%= root_url %> />
+    <meta property="og:title" content="These Walls" />
+    <meta property="og:description" content="Ollie Haydon-Mulligan, Bristol-based drummer and songwriter" />
   </head>
 
   <body>
