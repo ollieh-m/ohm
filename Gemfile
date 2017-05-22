@@ -41,6 +41,7 @@ gem 'administrate'
 gem 'mailgun-ruby'
 gem 'delayed_job_active_record'
 gem 'draper'
+gem 'sitemap_generator'
 
 group :test do
   gem 'rspec-rails'
