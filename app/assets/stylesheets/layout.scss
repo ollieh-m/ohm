@@ -67,13 +67,7 @@ footer {
   }
 }
 
-@media all and (max-width: 700px) {
-  section {
-    padding-right: 30%;
-  }
-}
-
-@media all and (max-width: 500px) {
+@media all and (max-width: 755px) {
   aside {
     order: 2;
     flex: 100%;
@@ -82,12 +76,30 @@ footer {
   section {
     order: 1;
     flex: 100%;
+    padding-right: 35%;
+  }
+}
+
+@media all and (max-width: 650px) {
+  section {
+    padding-right: 30%;
+  }
+}
+
+@media all and (max-width: 450px) {
+  section {
     padding-right: 25%;
+  }
+}
+
+@media all and (max-width: 400px) {
+  section {
+    padding-right: 20%;
   }
 }
 
 @media all and (max-width: 340px) {
   section {
-    padding-right: 10px;
+    padding-right: 15%;
   }
 }
